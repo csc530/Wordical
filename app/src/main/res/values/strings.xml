@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Wordical</string>
+    <string name="rules">All words are valid except: proper names of people (ex: Charles), abbreviations (ex: D.C), contractions (ex: don\'t), A word must be at least two letters long. Players add their points each round. All vowels are worth one point. The WILD side has no point value.</string>
+    <string name="gameplay">Players race to make a valid word with the highest Wordical Point (WP) value using their consonant cards and one or more of the vowels rolled on the dice. To create words touch any of the consonant cards or vowel dice to enter it into the text below. Each vowel can be used as many times as needed or not at all. If the WILD side is rolled, the player may use it for any vowel the player chooses including the letter Y. No duplicate words are allowed in a game. If you are unable to play a word in three tries that player receives only one point for that round.</string>
+</resources>

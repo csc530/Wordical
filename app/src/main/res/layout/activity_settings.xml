@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF33FF99"
+    android:orientation="vertical"
+    tools:context=".Settings">
+
+    <!--Displays the screen's title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="45sp"/>
+
+    <!--To ensure the user can see the below information if it can't fit onto their screen-->
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_gravity="center">
+        <!--Holds the instructions, rules and settings-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbarSize="25dp"
+            android:scrollbars="vertical"
+            android:verticalScrollbarPosition="right">
+            <!--Display's the gameplay header-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="GamePlay"
+                android:textAlignment="center"
+                android:textSize="25sp"/>
+            <!--displays the gameplay text-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="@string/gameplay"
+                android:textAlignment="textStart"
+                android:textSize="20sp"/>
+            <!--Displays the rules header-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Rules"
+                android:textAlignment="center"
+                android:textSize="25sp"/>
+            <!--displays the rules text-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="@string/rules"
+                android:textAlignment="textStart"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Holds the in-Game dictionary options-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <!--displays alterable option-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="In-Game Dictionary"
+            android:textAlignment="textStart"
+            android:textSize="25sp" />
+        <!--to select you'd like to enable or disable this option-->
+        <CheckBox
+            android:id="@+id/Dictionary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/black"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <!--displays alterable option-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="Hints                         "
+            android:textAlignment="textStart"
+            android:textSize="25sp"/>
+        <!--to select you'd like to enable or disable this option-->
+        <CheckBox
+            android:id="@+id/Hints"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/black"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <!--displays alterable option-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="Game length/Deck size"
+            android:textAlignment="textStart"
+            android:textSize="25sp"/>
+        <!--displays variant of the option you'd like-->
+        <ToggleButton
+            android:id="@+id/length"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/black"
+            android:gravity="center"
+            android:textOff="Normal"
+            android:textOn="Long"/>
+    </LinearLayout>
+
+    <!--Holds disclaimer text and back button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <!--displays disclaimer of settings-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*You cannot change these settings while in game."
+            android:textSize="25sp"/>
+        <!--The back button to return to the start screen-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="home"
+            android:scaleType="fitCenter"
+            android:src="@drawable/delete"/>
+    </LinearLayout>
+</LinearLayout>
